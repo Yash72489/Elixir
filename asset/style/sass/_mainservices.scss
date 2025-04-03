@@ -1,0 +1,116 @@
+.bg-grey {
+    background-color: #f4f3f3;
+}
+
+.Main-Services {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    h1 {
+        color: #2A3855;
+        font-weight: 700;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+
+    .mainservices-line {
+        border: 2px solid #2A3855;
+        width: 100px;
+        margin: 1rem 0;
+    }
+
+    .responsive-table-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+    .custom-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+
+    .custom-table tr {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+    }
+
+    .custom-table td {
+        padding: 15px;
+        border: none;
+    }
+
+    .image-cell img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .content-cell h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .content-cell p {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .learn-more-link {
+        color: #000;
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    .learn-more-link:hover {
+        text-decoration: underline;
+        transform: translateX(5px);
+    }
+
+    /* Responsive adjustments */
+    @media (min-width: 768px) {
+        .custom-table tr {
+            flex-direction: row;
+        }
+
+        .image-cell {
+            width: 40%;
+        }
+
+        .content-cell {
+            width: 60%;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .custom-table tr {
+            display: table-row;
+        }
+
+        .custom-table td {
+            width: 50%;
+            vertical-align: top;
+        }
+
+        .image-cell img {
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+}

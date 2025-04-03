@@ -1,0 +1,127 @@
+.carousel {
+    position: relative;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 500px;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 600px;
+}
+
+.overlay-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #286095;
+}
+
+.overlay-content p {
+    font-size: 1.7rem;
+    line-height: 1.6;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none;
+    a{
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.btn-blue {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.btn-yellow {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn span {
+    margin-left: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .overlay-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .overlay-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 80vh;
+    }
+
+    .overlay-content {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .overlay-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .overlay-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .overlay-content p {
+        font-size: 1rem;
+    }
+}

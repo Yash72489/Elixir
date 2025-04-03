@@ -1,0 +1,210 @@
+.container-contact {
+    .bg-grey-contact {
+        background-color: #f4f3f3;
+
+        section {
+            margin: 0 auto !important;
+            padding: 200px 0 !important;
+
+            .contact-container {
+             
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+
+                .contact-cards {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 50px;
+
+                    .contact-card {
+                        width: 400px;
+                        background-color: #fcfcfc;
+                        padding: 40px;
+                        border-radius: 10px;
+
+                        .card-width {
+                            width: 150px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+
+                            h2 {
+                                font-size: 1.4rem;
+                                width: 200px;
+                                font-weight: 700;
+                            }
+
+                            span {
+                                color: #777777;
+                            }
+                        }
+                    }
+
+                    .contact-card-list {
+                        width: 400px;
+                        background-color: #fcfcfc;
+                        padding: 40px;
+                        border-radius: 10px;
+
+                        .card-width {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+
+                            h2 {
+                                font-size: 1.4rem;
+                                font-weight: 700;
+                            }
+
+                            i {
+                                background: #272727;
+                                color: #fff;
+                                padding: 3px 8px;
+                                border-radius: 4px;
+                            }
+                        }
+                    }
+                }
+
+                .contact-map {
+                    max-width: 1200px;
+                    padding: 40px;
+                    background-color: #fcfcfc;
+                    border-radius: 10px;
+
+                    iframe {
+                        width: 100%;
+                        border-radius: 20px;
+                    }
+                }
+
+                .contact-form {
+                
+                    background-color: #fcfcfc;
+                    border-radius: 10px;
+                    padding: 20px;
+
+                    .form-container {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+
+                        h2 {
+                            font-size: 1.6rem;
+                            font-weight: 700;
+                        }
+
+                        input {
+                            padding: 14px;
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+
+                        textarea {
+                            height: 450px;
+                            padding: 14px;
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+
+                        .form-btn {
+                            button {
+                                background-color: #0f1738;
+                                color: #fff;
+                                padding: 10px 30px;
+                                font-size: 0.8rem;
+                                border: none;
+                                border-radius: 4px;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        section {
+            margin: 0 auto !important;
+        }
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+    .container-contact .bg-grey-contact section {
+        padding: 80px 0 !important;
+    }
+
+    .container-contact .bg-grey-contact section .contact-container {
+        gap: 30px;
+    }
+
+    .container-contact .bg-grey-contact section .contact-container .contact-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container-contact .bg-grey-contact section .contact-container .contact-cards .contact-card,
+    .container-contact .bg-grey-contact section .contact-container .contact-cards .contact-card-list {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .container-contact .bg-grey-contact section .contact-container .contact-map {
+        padding: 20px;
+    }
+
+    .container-contact .bg-grey-contact section .contact-container .contact-map iframe {
+        border-radius: 10px;
+    }
+
+    .container-contact .bg-grey-contact section .contact-container .contact-form .form-container textarea {
+        height: 250px;
+    }
+}
+
+/* Tablet Responsive */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container-contact .bg-grey-contact section {
+        padding: 120px 0 !important;
+    }
+
+    .container-contact .bg-grey-contact section .contact-container {
+        gap: 40px;
+    }
+
+    .container-contact .bg-grey-contact section .contact-container .contact-cards {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .container-contact .bg-grey-contact section .contact-container .contact-cards .contact-card,
+    .container-contact .bg-grey-contact section .contact-container .contact-cards .contact-card-list {
+        width: calc(50% - 15px);
+        padding: 30px;
+    }
+
+    .container-contact .bg-grey-contact section .contact-container .contact-form .form-container textarea {
+        height: 350px;
+    }
+}
+
+/* Laptop Responsive */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .container-contact .bg-grey-contact section {
+        padding: 150px 0 !important;
+    }
+
+    .container-contact .bg-grey-contact section .contact-container .contact-cards .contact-card,
+    .container-contact .bg-grey-contact section .contact-container .contact-cards .contact-card-list {
+        width: 350px;
+        padding: 30px;
+    }
+}

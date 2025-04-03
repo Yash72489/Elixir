@@ -1,0 +1,108 @@
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$text-color: #333;
+$light-bg: #f9f9f9;
+$card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+$border-radius: 8px;
+$spacing-unit: 1.5rem;
+
+// Add these missing variables
+$thing-spacing: 1.5rem;
+$thing-border-radius: $border-radius;
+$thing-box-shadow: $card-shadow;
+$thing-icon-size: 60px;
+$thing-icon-bg: #f0f4ff;
+$thing-icon-color: $primary-color;
+
+.things-you-get {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    h1 {
+        color: #2A3855;
+        font-weight: 700;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .thing-line {
+        border: 2px solid #2A3855;
+        width: 100px;
+        margin: 1rem 0;
+    }
+
+    #thing-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $thing-spacing;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    // Card Styling
+    .Thing-content {
+        background: white;
+        border-radius: $thing-border-radius;
+        box-shadow: $thing-box-shadow;
+        padding: 2rem;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    // Icon Styling
+    .Thing-icon {
+        width: $thing-icon-size;
+        height: $thing-icon-size;
+        margin: 0 auto 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $thing-icon-bg;
+        border-radius: 50%;
+        color: $thing-icon-color;
+        font-size: 1.5rem;
+
+        svg {
+            width: 60%;
+            height: 60%;
+            fill: currentColor;
+        }
+    }
+
+    // Text Styling
+    .Thing-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #2d3748;
+    }
+
+    .Thing-description {
+        font-size: 0.9rem;
+        color: #718096;
+        line-height: 1.6;
+        margin: 0;
+    }
+}
